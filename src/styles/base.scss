@@ -1,0 +1,51 @@
+ *,
+:before,
+:after {
+    box-sizing: border-box;
+    position: relative;
+}
+
+body,
+html,
+.app-container {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    image-rendering: pixelated;
+    image-rendering: -moz-crisp-edges;
+    user-select: none;
+    overflow: hidden;
+}
+
+.game-title {
+    background: #111;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 100;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &.hide {
+        opacity: 0;
+        pointer-events: none;
+    }
+
+    > div {
+        font-size: 5vw;
+        transform: translateY(-30%);
+    }
+}
+
+.gnome {
+    background: url('../images/gnome-stand.gif');
+    width: calc(7px * 19);
+    height: calc(11px * 19);
+    background-size: cover;
+}
